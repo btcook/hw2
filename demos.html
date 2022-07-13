@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="'UTf-8">
+    <title>Personal Expiriments</title>
+    <link rel="stylesheet" href="PLACEHOLDER STYLESHEET">
+</head>
+<body>
+    <header>
+        <h1>Benjamin Cook</h1>
+        <strong>Both the <em>person</em>, and the <em>proffesional</em>.</strong>
+        <nav>
+            <ul>
+                <li><a href="home.html">About</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="#">Demonstrations</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>To demonstrate some of my frontend knowledge, I will be showing off several features of HTML and explaining their common uses so your
+            website can be tailor made for your exact needs.
+        </h2>
+
+        <hr>
+
+        <h2>In this section, I'll be showing the difference between the <code>optgroup</code>,
+             <code>datalist</code>, and <code>fieldset</code> HTML tags which are all used within <code>form</code> elements
+            to allow a user to select dropdown options.
+        </h2>
+        
+        <ol>
+            
+            <a href="#anchor-1"><li>optgroup</li></a>
+            <a href="#anchor-2"><li>datalist</li></a>
+            <a href="#anchor-3"><li>fieldset</li></a>
+            <a href="#anchor-4"><li>textarea</li></a>
+            <a href="#anchor-5"><li>canvas</li></a>
+            <a href="#anchor-6"><li>src</li></a>
+        </ol>
+
+         <!--We will input files for the forms to link to if needed, but this page may be pruned-->
+        <section>
+            <a id="anchor-1"></a>
+            <h3>The optgroup tag is used to group elements in a dropdown list:</h3>
+           
+            <form action="" method="get">
+                <label for="colors">Choose a color:</label>
+                <select name="colors" id="colors">
+                  <optgroup label="Primary Colors">
+                    <option value="red">Red</option>
+                    <option value="blue">Blue</option>
+                    <option value="yellow">Yellow</option>
+                  </optgroup>
+                  <optgroup label="Secondary Colors">
+                    <option value="green">Green</option>
+                    <option value="orange">Orange</option>
+                    <option value="purple">Purple</option>
+                  </optgroup>
+                </select>
+                <br><br>
+                <input type="submit" value="Submit">
+                <h6>The submit button is just for show, at least for now!</h6>
+              </form>
+        </section>
+
+        <section>
+            <a id="anchor-2"></a>
+            <h3>The datalist tag is used to autofill and suggest common options for a dropdown list:</h3>
+            <form action="" method="get">
+                <label for="Pet">Choose a pet!:</label>
+                <input list="pets" name="pet-types" id="pet-types">
+                <datalist id="pets">
+                  <option value="Dog">
+                  <option value="Cat">
+                  <option value="Bird">
+                  <option value="Turtle">
+                  <option value="Fish">
+                </datalist>
+              </form>
+        </section>
+
+        <section>
+            <a id="anchor-3"></a>
+            <h3>The fieldset tag is used to group related elements in a form:</h3>
+            <form action="" method="get">
+                <fieldset>
+                  <legend>Example Sign-In:</legend>
+                  <label for="fname">First name:</label>
+                  <input type="text" id="fname" name="fname">
+
+                  <label for="lname">Last name:</label>
+                  <input type="text" id="lname" name="lname">
+
+                  <label for="email">Email:</label>
+                  <input type="email" id="email" name="email">
+
+                  <label for="birthday">Birthday:</label>
+                  <input type="date" id="birthday" name="birthday">
+
+                  <input type="submit" value="Submit">
+                  <h6>The submit button is just for show, at least for now!</h6>
+                </fieldset>
+                
+              </form>
+        </section>
+
+        <a id="anchor-4"></a>
+        <h3>If all else fails, we can simply insert a textbox using the <code>textarea</code> tag.</h3>
+        <textarea rows="7" cols="100">Please provide feedback here!</textarea>
+
+        <hr>
+
+        <h2>Finally, we can also show off a few visual features of HTML, the <code>canvas</code> and <code>src</code> tags:
+        </h2>
+        <section>
+            <a id="anchor-5"></a>
+            <h3>With canvas we can maually draw shapes such as this yellow rectangle:</h3>
+            <canvas id="canvas">
+                Your browser does not support the canvas tag. 
+            </canvas>               
+            <script>
+                var canvas = document.getElementById("canvas");
+                var ctx = canvas.getContext("2d");
+                ctx.fillStyle = "#FFF000";
+                ctx.fillRect(0, 0, 80, 80);
+            </script>
+        </section>
+
+        <section>
+            <a id="anchor-6"></a>
+            <h3>With src, we can use it as a modifiable image:</h3>
+            <object type="image/svg+xml" data="graphic.svg">Fallback content if SVG doesn't load.</object>
+        </section>
+    </main>
+</body>
+
+</html>
